@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 // ✏️ CLIENT EDITABLE — Update hero content here
 const heroConfig = {
@@ -12,14 +12,14 @@ const heroConfig = {
   secondaryCta: { label: "Explore Our Menu", href: "#menu" },
 };
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   show: (i: number) => ({
     opacity: 1,
     y: 0,
     transition: { duration: 1, ease: "easeOut", delay: 0.2 + i * 0.15 },
   }),
-} as const;
+};
 
 export default function HeroBanner() {
   return (
